@@ -118,9 +118,11 @@ export default function ItemForm({ itemToUpdate }) {
             onChange={handleChange}
         ></textarea>
     </div>
+    <div className="button-container">
     <button className="button is-primary is-large">
         Salvar
         </button>
+    </div>
     </form>
     )
 }
