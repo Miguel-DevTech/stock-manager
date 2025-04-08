@@ -17,7 +17,7 @@ export default function Home() {
     const lowQuantityTotal = lowQuantityItems.length
 
     return (
-        <main>
+        <main className="dashboard-container">
         <h1>Dashboard</h1>
         <div className="row">
             <div className="dashboard-card">

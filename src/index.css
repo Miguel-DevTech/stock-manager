@@ -58,6 +58,7 @@ nav a:hover {
 /* ==== Tipografia ==== */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -153,16 +154,60 @@ input, textarea, select {
   width: 100%;
 }
 
-/* ==== Cards e Dashboard ==== */
-.item h2 {
-  display: inline-block;
-  margin-right: 2rem;
+.row  {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
 }
 
-.item p {
-  font-size: 1.25rem;
+/* ==== Cards e Dashboard ==== */
+.item {
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
   margin-top: 2rem;
 }
+
+.item h2 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.item-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.item-meta span {
+  flex: 1 1 200px;
+}
+
+.item-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.item-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+
 
 .dashboard-card {
   background-color: #1c1a1d;

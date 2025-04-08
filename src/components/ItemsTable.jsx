@@ -44,7 +44,7 @@ export default function ItemsTable() {
                 {items.map((item) => (
                     <div key={item.id} className="card">
                         <div className="card-header">
-                            <h3>{item.name}</h3>
+                            <h2>{item.name}</h2>
                             <p className="card-id">ID: {item.id}</p>
                         </div>
                         <div className="card-body">

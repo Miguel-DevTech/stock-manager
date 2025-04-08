@@ -9,20 +9,28 @@ export default function ShowItem() {
     const item = getItem(id)
 
     return (
-    <div className="item">
+        <div className="item">
         <h2>{item.name}</h2>
-        <Link to={`/items/${item.id}/update`} className="button is-small">Atualizar</Link>
+    
+        <div className="item-actions">
+        <Link to={`/items/${item.id}/update`} className="button is-small">
+            Atualizar
+        </Link>
         <DeleteButton itemId={item.id} itemName={item.name} />
-        <div className="row">
-            <span>Categoria: {item.category}</span>
-            <span>Quantidade em estoque: {item.quantity}</span>
-            <span>Preço: R$ {item.price}</span>
         </div>
-        <p>{item.description}</p>
-        <div className="row">
-            <p>Cadastrado em: {item.createdAt.toDateString()}</p>
-            <p>Atualizado em: {item.updatedAt.toDateString()}</p>
+    
+        <div className="item-meta">
+        <span><strong>Categoria:</strong> {item.category}</span>
+        <span><strong>Quantidade:</strong> {item.quantity}</span>
+        <span><strong>Preço:</strong> R$ {item.price}</span>
         </div>
+
+        <p className="item-description">{item.description}</p>
+
+        <div className="item-dates">
+        <p><strong>Cadastrado em:</strong> {item.createdAt.toDateString()}</p>
+        <p><strong>Atualizado em:</strong> {item.updatedAt.toDateString()}</p>
         </div>
-    )
-    }
+    </div>
+    );
+}
